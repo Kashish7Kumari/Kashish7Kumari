@@ -1,0 +1,135 @@
+---
+title: "Assessment 2"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# Create the data frame
+patient_data <- data.frame(
+  S.NO. = c(101, 102, 103, 104, 105, 106),
+  AGE = c(25, 22, 29, 30, 35, 40),
+  SEX = c("Male", "Female", "Female", "Male", "Male", "Female"),
+  Medical_Status = c("Diabetic", "Non-Diabetic", "Diabetic", 
+                    "Non-Diabetic", "Non-Diabetic", "Diabetic")
+)
+
+# Display the table
+knitr::kable(patient_data, caption = "Patient Medical Data")
+# Create the initial data frame
+gdp_data <- data.frame(
+  Countries = c("Norway", "France", "Mexico", "USA", "Korea"),
+  Real_GDP_growth = c(3.22, 2.05, 3.67, 2.99, 5.51),
+  Population_Growth = c(0.71, 0.47, 0.65, 1.19, 1.03)
+)
+
+# Add the new column
+gdp_data$Real_Per_capita_GDP_Growth <- c(2.51, 1.87, 1.54, 1.80, 3.92)
+
+# Display the table
+knitr::kable(gdp_data, caption = "Country GDP Data")
+
+### HTML Solution (save as .html file)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assessment 2</title>
+</head>
+<body>
+
+<h1>Assessment 2</h1>
+
+<h2>Question 1</h2>
+<table border="1">
+  <caption>Patient Medical Data</caption>
+  <tr>
+    <th>S.NO.</th>
+    <th>AGE</th>
+    <th>SEX</th>
+    <th>Medical Status</th>
+  </tr>
+  <tr>
+    <td>101</td>
+    <td>25</td>
+    <td>Male</td>
+    <td>Diabetic</td>
+  </tr>
+  <tr>
+    <td>102</td>
+    <td>22</td>
+    <td>Female</td>
+    <td>Non-Diabetic</td>
+  </tr>
+  <tr>
+    <td>103</td>
+    <td>29</td>
+    <td>Female</td>
+    <td>Diabetic</td>
+  </tr>
+  <tr>
+    <td>104</td>
+    <td>30</td>
+    <td>Male</td>
+    <td>Non-Diabetic</td>
+  </tr>
+  <tr>
+    <td>105</td>
+    <td>35</td>
+    <td>Male</td>
+    <td>Non-Diabetic</td>
+  </tr>
+  <tr>
+    <td>106</td>
+    <td>40</td>
+    <td>Female</td>
+    <td>Diabetic</td>
+  </tr>
+</table>
+
+<h2>Question 2</h2>
+<table border="1">
+  <caption>Country GDP Data</caption>
+  <tr>
+    <th>Countries</th>
+    <th>Real GDP growth</th>
+    <th>Population Growth</th>
+    <th>Real Per capita GDP Growth</th>
+  </tr>
+  <tr>
+    <td>Norway</td>
+    <td>3.22</td>
+    <td>0.71</td>
+    <td>2.51</td>
+  </tr>
+  <tr>
+    <td>France</td>
+    <td>2.05</td>
+    <td>0.47</td>
+    <td>1.87</td>
+  </tr>
+  <tr>
+    <td>Mexico</td>
+    <td>3.67</td>
+    <td>0.65</td>
+    <td>1.54</td>
+  </tr>
+  <tr>
+    <td>USA</td>
+    <td>2.99</td>
+    <td>1.19</td>
+    <td>1.80</td>
+  </tr>
+  <tr>
+    <td>Korea</td>
+    <td>5.51</td>
+    <td>1.03</td>
+    <td>3.92</td>
+  </tr>
+</table>
+
+</body>
+</html>
